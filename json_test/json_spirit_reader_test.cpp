@@ -826,19 +826,19 @@ namespace
 #endif
 
 #ifdef JSON_SPIRIT_VALUE_ENABLED
-    void test_extended_ascii( const string& s )
+    void test_extended_utf8( const string& s )
     {
         Value value;
 
         test_read( "[\"" + s + "\"]", value );
 
-        assert_eq( value.get_array()[0].get_str(), "äöüß" );
+        assert_eq( value.get_array()[0].get_str(), "Ã¤Ã¶Ã¼ÃŸ" );
     }
 
-    void test_extended_ascii()
+    void test_extended_utf8()
     {
-        test_extended_ascii( "\\u00E4\\u00F6\\u00FC\\u00DF" );
-        test_extended_ascii( "äöüß" );
+        test_extended_utf8( "\\u00E4\\u00F6\\u00FC\\u00DF" );
+        test_extended_utf8( "Ã¤Ã¶Ã¼ÃŸ" );
     }
 #endif
 }
@@ -849,7 +849,7 @@ void json_spirit::test_reader()
 {
 #ifdef JSON_SPIRIT_VALUE_ENABLED
     Test_runner< Config  >().run_tests();
-    test_extended_ascii();
+    test_extended_utf8();
 #endif
 #ifdef JSON_SPIRIT_MVALUE_ENABLED
     Test_runner< mConfig >().run_tests();
