@@ -1,8 +1,7 @@
 CMAKE_MINIMUM_REQUIRED(VERSION 2.6)
 
 PROJECT(json_spirit)
-set( CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11" )
-SUBDIRS(json_spirit )
+SUBDIRS(json_spirit json_demo json_headers_only_demo json_map_demo json_test)
 INCLUDE_DIRECTORIES(json_spirit)
 
 INSTALL(
