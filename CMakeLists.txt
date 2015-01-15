@@ -1,12 +1,12 @@
 CMAKE_MINIMUM_REQUIRED(VERSION 2.6)
 
 PROJECT(json_spirit)
+INCLUDE_DIRECTORIES(json_spirit)
 ADD_SUBDIRECTORY(json_spirit)
 ADD_SUBDIRECTORY(json_demo)
 ADD_SUBDIRECTORY(json_headers_only_demo)
 ADD_SUBDIRECTORY(json_map_demo)
 ADD_SUBDIRECTORY(json_test)
-INCLUDE_DIRECTORIES(json_spirit)
 
 INSTALL(
   FILES
