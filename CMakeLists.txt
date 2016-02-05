@@ -22,9 +22,4 @@ INSTALL(
   ${CMAKE_SOURCE_DIR}/json_spirit/json_spirit_writer_options.h
   DESTINATION include/json_spirit)
 
-INSTALL(
-  FILES
-  ${CMAKE_BINARY_DIR}/json_spirit/libjson_spirit.a
-  DESTINATION lib)
-
 INCLUDE(CPack)
